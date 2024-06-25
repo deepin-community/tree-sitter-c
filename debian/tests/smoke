@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/tree-sitter/lib"
+
+for dir in /usr/src/tree-sitter/c/*; do
+	ver=$(basename "$dir")
+	rm -f "$CACHE_DIR"/c.so
+
+	printf 'Testing C parser, version %s\n' "$ver"
+	make -f "${dir}/Makefile" OBJ_DIR="$CACHE_DIR"
+	tree-sitter test
+done
