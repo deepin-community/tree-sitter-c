@@ -1,5 +1,13 @@
-template-repository (1.0-1) unstable; urgency=medium
+tree-sitter-c (0.20.5-2) unstable; urgency=medium
 
-  * Initial release
+  * Upload to unstable
+  * Add explicit copyright stanza for debian/
+  * Add comment about provenance of src/tree_sitter/parser.h
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- James McCoy <jamessan@debian.org>  Thu, 25 Jan 2024 07:51:41 -0500
+
+tree-sitter-c (0.20.5-1) experimental; urgency=medium
+
+  * Initial debianization. (Closes: #1030088)
+
+ -- James McCoy <jamessan@debian.org>  Wed, 27 Sep 2023 18:22:24 -0400
