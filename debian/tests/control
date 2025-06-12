@@ -1,0 +1,35 @@
+Tests: smoke
+Depends: tree-sitter-cli, tree-sitter-c-src
+
+Test-Command: /usr/share/dh-rust/bin/cargo-auto-test tree-sitter-c 0.21.3 --all-targets --all-features
+Features:
+ test-name=librust-tree-sitter-c-dev:@,
+Depends:
+ dh-rust,
+ librust-cc-1+default-dev (>= 1.0.90),
+ librust-tree-sitter-0+default-dev (>= 0.21),
+ librust-tree-sitter-c-0.21-dev,
+Restrictions:
+ allow-stderr,
+
+Test-Command: /usr/share/dh-rust/bin/cargo-auto-test tree-sitter-c 0.21.3 --all-targets
+Features:
+ test-name=librust-tree-sitter-c-dev:default,
+Depends:
+ dh-rust,
+ librust-cc-1+default-dev (>= 1.0.90),
+ librust-tree-sitter-0+default-dev (>= 0.21),
+ librust-tree-sitter-c-0.21+default-dev,
+Restrictions:
+ allow-stderr,
+
+Test-Command: /usr/share/dh-rust/bin/cargo-auto-test tree-sitter-c 0.21.3 --all-targets --no-default-features
+Features:
+ test-name=librust-tree-sitter-c-dev:,
+Depends:
+ dh-rust,
+ librust-cc-1+default-dev (>= 1.0.90),
+ librust-tree-sitter-0+default-dev (>= 0.21),
+ librust-tree-sitter-c-0.21-dev,
+Restrictions:
+ allow-stderr,

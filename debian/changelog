@@ -1,5 +1,53 @@
-template-repository (1.0-1) unstable; urgency=medium
+tree-sitter-c (0.21.3-4) unstable; urgency=medium
 
-  * Initial release
+  * Add libc-dev and make to tree-sitter-src Depends
+  * Add cargo and rustc explicitly to Build-Depends
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- James McCoy <jamessan@debian.org>  Sun, 16 Mar 2025 22:11:10 -0400
+
+tree-sitter-c (0.21.3-3) unstable; urgency=medium
+
+  * Upload to unstable
+  * d/clean: Add trailing slash to debian/.cache/
+  * Add librust-cc-dev to Build-Depends
+  * Revert "Switch debian branch to debian/experimental"
+  * Declare compliance with Policy 4.7.2, no changes needed
+
+ -- James McCoy <jamessan@debian.org>  Sat, 08 Mar 2025 13:53:14 -0500
+
+tree-sitter-c (0.21.3-2) experimental; urgency=medium
+
+  * Fix typo in librust-tree-sitter-c-dev description
+  * Add salsa-ci.yml config
+  * salsa-ci: Use experimental release
+  * Include array.h and alloc.h in tree-sitter-c-src
+
+ -- James McCoy <jamessan@debian.org>  Sat, 21 Dec 2024 09:01:48 -0500
+
+tree-sitter-c (0.21.3-1) experimental; urgency=medium
+
+  * New upstream release (Closes: #1071623)
+  * Add >= 0.22.6 version constraint on tree-sitter-cli Build-Depends
+  * Include parser.h in the package to align with upstream change to not
+    include parser.h in libtree-sitter-dev
+  * Switch pkg-config Depends to pkgconf
+  * Declare compliance with Policy 4.7.0, no changes needed
+  * Adapt shared object build from C++ to C
+  * Depend on libtree-sitter-dev >= 0.22
+  * Add librust-tree-sitter-c-dev package
+
+ -- James McCoy <jamessan@debian.org>  Tue, 17 Dec 2024 10:49:32 -0500
+
+tree-sitter-c (0.20.5-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * Add explicit copyright stanza for debian/
+  * Add comment about provenance of src/tree_sitter/parser.h
+
+ -- James McCoy <jamessan@debian.org>  Thu, 25 Jan 2024 07:51:41 -0500
+
+tree-sitter-c (0.20.5-1) experimental; urgency=medium
+
+  * Initial debianization. (Closes: #1030088)
+
+ -- James McCoy <jamessan@debian.org>  Wed, 27 Sep 2023 18:22:24 -0400
